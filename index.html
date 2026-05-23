@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant AI Apps Hub - Custom No-Code Prompt Suite [June 2026]</title>
+    <meta name="description" content="Access dozens of automated, fill-in-the-blank AI micro apps. Launch smart optimized prompts into ChatGPT, Claude, and Perplexity instantly.">
+    <style>
+        :root { --bg: #0d1117; --text: #c9d1d9; --accent: #2ea043; --card: #161b22; --border: #30363d; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); max-width: 900px; margin: 0 auto; padding: 2rem 1rem; line-height: 1.6; }
+        h1 { font-size: 2.2rem; color: #f0f6fc; text-align: center; margin-bottom: 0.5rem; }
+        .sub-title { text-align: center; color: #8b949e; margin-bottom: 2rem; font-size: 1.05rem; }
+        .search-bar { width: 100%; padding: 14px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 1.1rem; box-sizing: border-box; margin-bottom: 2.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        .search-bar:focus { border-color: #58a6ff; outline: none; }
+
+        .section-title { font-size: 1.4rem; color: #f0f6fc; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin-top: 2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 2rem; }
+
+        .app-card { background: var(--card); border: 1px solid var(--border); padding: 1.2rem; border-radius: 8px; text-decoration: none; color: var(--text); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s, border-color 0.2s; }
+        .app-card:hover { transform: translateY(-2px); border-color: #58a6ff; background: #1f242c; }
+        .app-card h3 { margin: 0 0 0.5rem 0; color: #f0f6fc; font-size: 1.1rem; }
+        .app-card p { margin: 0; font-size: 0.85rem; color: #8b949e; line-height: 1.4; }
+        .cat-tag { align-self: flex-start; background: #21262d; border: 1px solid var(--border); color: #58a6ff; font-size: 0.75rem; padding: 2px 8px; border-radius: 12px; margin-top: 1rem; font-family: monospace; }
+
+        .footer { text-align: center; margin-top: 5rem; color: #8b949e; font-size: 0.85rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+
+        /* 🗺️ 优雅的页脚全站大目录，光明正大地喂饱谷歌蜘蛛，绝不存在Cloaking封号风险 */
+        .seo-directory-section { margin-top: 6rem; padding-top: 2rem; border-top: 1px dashed var(--border); }
+        .seo-directory-title { font-size: 1rem; color: #f0f6fc; margin-bottom: 1rem; font-weight: bold; }
+        .seo-link-pool { display: flex; flex-wrap: wrap; gap: 12px; }
+        .seo-link-pool a { font-size: 0.8rem; color: #8b949e; text-decoration: none; }
+        .seo-link-pool a:hover { color: #58a6ff; text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Instant AI Apps Hub</h1>
+    <div class="sub-title">Zero prompting required. Fill blanks, choose your AI weapon, and deploy instantly.</div>
+
+    <input type="text" id="main-search" class="search-bar" placeholder="🔍 Search micro apps (e.g., resume, resignation, copy, excel)..." oninput="filterApps()">
+
+    <div class="section-block" id="cat-block-Career">
+        <div class="section-title">💼 Career & Job Hunting</div>
+        <div class="grid-container">        <a href="scenarios/cover-letter-writer.html" class="app-card">
+            <div>
+                <h3>AI Tailored Cover Letter Builder</h3>
+                <p>Generate a highly tailored cover letter that matches any job description perfectly to...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+        <a href="scenarios/resume-summary-builder.html" class="app-card">
+            <div>
+                <h3>AI Resume Summary Statement Builder</h3>
+                <p>Craft a powerful, executive-level professional summary for the top of your resume in ...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+        <a href="scenarios/recruiter-cold-email.html" class="app-card">
+            <div>
+                <h3>Recruiter Cold Outreach Email Builder</h3>
+                <p>Generate high-conversion cold outreach emails to hiring managers that get replies, no...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+        <a href="scenarios/interview-thank-you.html" class="app-card">
+            <div>
+                <h3>Post-Interview High-EQ Thank You Builder</h3>
+                <p>Generate professional post-interview thank you emails that reinforce your value and s...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+        <a href="scenarios/linkedin-profile-bio.html" class="app-card">
+            <div>
+                <h3>LinkedIn Professional Bio & Summary Engineer</h3>
+                <p>Optimize your LinkedIn 'About' section for industry SEO keywords to attract inbound r...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+        <a href="scenarios/reference-letter-builder.html" class="app-card">
+            <div>
+                <h3>Professional Recommendation Letter Builder</h3>
+                <p>Generate comprehensive, formal letters of recommendation for employees, colleagues, o...</p>
+            </div>
+            <span class="cat-tag">Career</span>
+        </a>
+</div>
+    </div>
+
+    <div class="section-block" id="cat-block-Office">
+        <div class="section-title">🏢 Corporate & Office Survival</div>
+        <div class="grid-container">        <a href="scenarios/resignation-letter-generator.html" class="app-card">
+            <div>
+                <h3>AI Resignation Letter Generator</h3>
+                <p>Generate a professional, watertight resignation letter instantly. One-click auto-fill...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/weekly-report-polisher.html" class="app-card">
+            <div>
+                <h3>AI Weekly Report Professional Polisher</h3>
+                <p>Turn your chaotic bullet points into professional corporate weekly reports. Direct li...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/salary-raise-request.html" class="app-card">
+            <div>
+                <h3>AI Salary Raise & Promotion Pitch Builder</h3>
+                <p>Build a fact-based, objective salary negotiation email script to ask your manager for...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/sick-leave-email.html" class="app-card">
+            <div>
+                <h3>Urgent Sick Leave Notification Builder</h3>
+                <p>Generate short, professional urgent sick leave notifications for your team and manage...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/meeting-minutes-summarizer.html" class="app-card">
+            <div>
+                <h3>Meeting Minutes & Action Item Summarizer</h3>
+                <p>Convert chaotic meeting transcripts or rough internal notes into formal corporate mee...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/project-proposal-outline.html" class="app-card">
+            <div>
+                <h3>AI Project Proposal Structure Builder</h3>
+                <p>Convert a rough business idea into a professional, corporate-ready project proposal f...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+        <a href="scenarios/performance-self-evaluation.html" class="app-card">
+            <div>
+                <h3>Annual Performance Self-Review Builder</h3>
+                <p>Turn your basic list of year-end tasks into a high-scoring corporate performance self...</p>
+            </div>
+            <span class="cat-tag">Office</span>
+        </a>
+</div>
+    </div>
+
+    <div class="section-block" id="cat-block-Marketing">
+        <div class="section-title">📣 Viral Marketing & E-commerce</div>
+        <div class="grid-container">        <a href="scenarios/xiaohongshu-copy-filter.html" class="app-card">
+            <div>
+                <h3>Xiaohongshu Viral Copywriting Filter</h3>
+                <p>Transform raw product specifications into highly contagious social media copy packed ...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/tiktok-script-generator.html" class="app-card">
+            <div>
+                <h3>TikTok Short Video Script Engineer</h3>
+                <p>Generate high-retention TikTok, Reels, or Shorts scripts with automated hook engineer...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/amazon-product-listing.html" class="app-card">
+            <div>
+                <h3>Amazon SEO E-commerce Listing Builder</h3>
+                <p>Generate keyword-rich Amazon product titles and high-converting feature bullet points...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/cold-sales-outreach.html" class="app-card">
+            <div>
+                <h3>B2B Cold Sales Email Architecture Builder</h3>
+                <p>Draft high-converting B2B cold sales pitch emails targeting corporate decision makers...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/customer-apology-email.html" class="app-card">
+            <div>
+                <h3>Customer Apology & Compensation Letter Builder</h3>
+                <p>Draft empathetic, formal customer service emails handling shipping delays, product de...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/influencer-collaboration-pitch.html" class="app-card">
+            <div>
+                <h3>Influencer Sponsorship Outreach Builder</h3>
+                <p>Build tailored outreach messages to pitch brand sponsorships and product collaboratio...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+        <a href="scenarios/copywriting-pas-framework.html" class="app-card">
+            <div>
+                <h3>PAS Marketing Copy Framework Generator</h3>
+                <p>Generate high-converting marketing copy based on the timeless Problem-Agitate-Solve s...</p>
+            </div>
+            <span class="cat-tag">Marketing</span>
+        </a>
+</div>
+    </div>
+
+    <div class="section-block" id="cat-block-Utility">
+        <div class="section-title">📊 High-Efficiency Utilities & Academic Frameworks</div>
+        <div class="grid-container">        <a href="scenarios/excel-formula-translator.html" class="app-card">
+            <div>
+                <h3>Excel Formula Plain English Translator</h3>
+                <p>Convert plain English descriptions into complex, ready-to-use Excel or Google Sheets ...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/google-sheets-apps-script.html" class="app-card">
+            <div>
+                <h3>Google Sheets Apps Script Automation Builder</h3>
+                <p>Generate custom JavaScript macro scripts to automate repetitive workflows inside Goog...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/sql-query-generator.html" class="app-card">
+            <div>
+                <h3>SQL Query Data Compiler Terminal</h3>
+                <p>Convert plain human sentences into fully valid, complex SQL queries across MySQL, Pos...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/regex-pattern-builder.html" class="app-card">
+            <div>
+                <h3>Regex Regular Expression Pattern Builder</h3>
+                <p>Build complex text validation and scraping regular expressions from descriptive data ...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/html-table-styler.html" class="app-card">
+            <div>
+                <h3>Responsive HTML Table Layout Compiler</h3>
+                <p>Generate clean, modern, fully responsive HTML table structures embedded with native i...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/academic-essay-polisher.html" class="app-card">
+            <div>
+                <h3>Academic Essay Tone Polisher</h3>
+                <p>Elevate your writing to university-level academic standards. Eliminate loose grammar ...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/abstract-executive-summary.html" class="app-card">
+            <div>
+                <h3>Academic Abstract & Summary Compiler</h3>
+                <p>Condense massive academic papers or comprehensive thesis drafts into standard, high-i...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/citation-style-converter.html" class="app-card">
+            <div>
+                <h3>Academic Citation Reference Compiler</h3>
+                <p>Convert unformatted raw book data or web source links into perfectly valid academic b...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/plagiarism-rewriter-rephraser.html" class="app-card">
+            <div>
+                <h3>Scholarly Text Paraphraser & Article Rewriter</h3>
+                <p>Rewrite paragraphs to ensure low AI detection scores and unique sentence paths while ...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+        <a href="scenarios/grammar-punctuation-fixer.html" class="app-card">
+            <div>
+                <h3>Global Prose Proofreader & Grammar Engine</h3>
+                <p>Flush out typos, incorrect prepositions, and broken punctuation layouts from comprehe...</p>
+            </div>
+            <span class="cat-tag">Utility</span>
+        </a>
+</div>
+    </div>
+
+    <div class="section-block" id="cat-block-Social">
+        <div class="section-title">🌹 Social & High-EQ Recovery</div>
+        <div class="grid-container">        <a href="scenarios/email-decoder-polisher.html" class="app-card">
+            <div>
+                <h3>Corporate Email High-EQ Translator</h3>
+                <p>Translate angry raw thoughts into corporate-safe, polite, yet devastatingly professio...</p>
+            </div>
+            <span class="cat-tag">Social</span>
+        </a>
+        <a href="scenarios/tinder-opener-crafter.html" class="app-card">
+            <div>
+                <h3>Dating App High-Response Icebreaker Crafter</h3>
+                <p>Generate funny, high-response dating app openers based on your match's bio or interes...</p>
+            </div>
+            <span class="cat-tag">Social</span>
+        </a>
+        <a href="scenarios/neighbor-complaint-letter.html" class="app-card">
+            <div>
+                <h3>Formal Neighbor Grievance & Complaint Letter Builder</h3>
+                <p>Generate firm, formal, legally-sound complaint letters to neighbors or property manag...</p>
+            </div>
+            <span class="cat-tag">Social</span>
+        </a>
+        <a href="scenarios/linkedin-layoff-announcement.html" class="app-card">
+            <div>
+                <h3>LinkedIn High-EQ Career Pivot Announcement</h3>
+                <p>Craft a dignified, professional LinkedIn announcement after being laid off to activat...</p>
+            </div>
+            <span class="cat-tag">Social</span>
+        </a>
+        <a href="scenarios/customer-review-comeback.html" class="app-card">
+            <div>
+                <h3>Google Maps & Yelp 1-Star Review Crisis Resolver</h3>
+                <p>Formulate strategic, high-EQ public replies to hostile or negative 1-star business re...</p>
+            </div>
+            <span class="cat-tag">Social</span>
+        </a>
+</div>
+    </div>
+
+    <div class="seo-directory-section">
+        <div class="seo-directory-title">🌐 Explore All AI Tools Directory Index</div>
+        <div class="seo-link-pool"><a href="scenarios/cover-letter-writer.html">AI Cover Letter Writer & Resume Matcher Tool</a>
+<a href="scenarios/resume-summary-builder.html">AI Resume Professional Summary Statement Builder</a>
+<a href="scenarios/recruiter-cold-email.html">AI Cold Email to Recruiter & Hiring Manager Template</a>
+<a href="scenarios/interview-thank-you.html">AI Interview Thank You Letter & Follow-Up Generator</a>
+<a href="scenarios/linkedin-profile-bio.html">AI LinkedIn Profile Bio & About Section Optimizer</a>
+<a href="scenarios/reference-letter-builder.html">AI Professional Recommendation & Reference Letter Builder</a>
+<a href="scenarios/resignation-letter-generator.html">AI Resignation Letter Generator & Formal Quit Email Builder</a>
+<a href="scenarios/weekly-report-polisher.html">AI Corporate Weekly Work Report Polisher</a>
+<a href="scenarios/salary-raise-request.html">AI Salary Raise Request & Promotion Email Builder</a>
+<a href="scenarios/sick-leave-email.html">AI Sick Leave Request & Medical Absence Email Generator</a>
+<a href="scenarios/meeting-minutes-summarizer.html">AI Meeting Minutes Summarizer & Action Item Extractor</a>
+<a href="scenarios/project-proposal-outline.html">AI Project Proposal Executive Summary Builder</a>
+<a href="scenarios/performance-self-evaluation.html">AI Performance Self-Evaluation & Review Generator</a>
+<a href="scenarios/xiaohongshu-copy-filter.html">Xiaohongshu Viral Copywriting AI Prompt Builder</a>
+<a href="scenarios/tiktok-script-generator.html">TikTok Short Video Hook & Script Generator</a>
+<a href="scenarios/amazon-product-listing.html">Amazon SEO Product Listing & Bullet Points Generator</a>
+<a href="scenarios/cold-sales-outreach.html">B2B Cold Sales Outreach Email Conversion Script</a>
+<a href="scenarios/customer-apology-email.html">E-commerce Customer Apology & Order Defect Email Builder</a>
+<a href="scenarios/influencer-collaboration-pitch.html">AI Brand Influencer Collaboration Pitch Script</a>
+<a href="scenarios/copywriting-pas-framework.html">PAS (Problem-Agitate-Solve) Copywriting Framework Generator</a>
+<a href="scenarios/excel-formula-translator.html">Excel Formula AI Translator & Dynamic Builder</a>
+<a href="scenarios/google-sheets-apps-script.html">Google Sheets Apps Script JavaScript Generator</a>
+<a href="scenarios/sql-query-generator.html">SQL Query Generator & Natural Language Compiler</a>
+<a href="scenarios/regex-pattern-builder.html">Regex Pattern Builder & Regular Expression Compiler</a>
+<a href="scenarios/html-table-styler.html">HTML Clean Table Grid Code Generator</a>
+<a href="scenarios/academic-essay-polisher.html">Academic Essay Polisher & Grammar Optimizer</a>
+<a href="scenarios/abstract-executive-summary.html">Academic Abstract & Paper Executive Summary Creator</a>
+<a href="scenarios/citation-style-converter.html">Academic Source Citation Reference Builder</a>
+<a href="scenarios/plagiarism-rewriter-rephraser.html">Academic AI Paraphraser & Anti-Plagiarism Rewriter</a>
+<a href="scenarios/grammar-punctuation-fixer.html">Global Document Grammar & Punctuation Engine</a>
+<a href="scenarios/email-decoder-polisher.html">Corporate Email Passive-Aggressive Decoder & Polisher</a>
+<a href="scenarios/tinder-opener-crafter.html">Dating App High-Conversion Opener Crafter</a>
+<a href="scenarios/neighbor-complaint-letter.html">Formal Neighbor Noise & Grievance Complaint Letter Builder</a>
+<a href="scenarios/linkedin-layoff-announcement.html">High-EQ LinkedIn Layoff Announcement & Network Outreach Post</a>
+<a href="scenarios/customer-review-comeback.html">Business Response Blueprint for Negative Online Reviews</a></div>
+    </div>
+
+    <div class="footer">
+        Maintained by Automated極客Studio. Built on top of Sovereign LLM Protocols.
+    </div>
+
+    <script>
+        function filterApps() {
+            const query = document.getElementById('main-search').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.app-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const desc = card.querySelector('p').innerText.toLowerCase();
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
